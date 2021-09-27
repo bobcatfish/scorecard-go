@@ -4,6 +4,8 @@ This tool provides scorecard results for the depdencies **of a Go project** whic
 **hosted on GitHub** (projects not hosted on GitHub cannot yet be scored by OSSF scorecards)
 based on the [OSSF Scorecards](https://github.com/ossf/scorecard) project.
 
+_You can see this tool in action in [this GitHub action](https://github.com/bobcatfish/catservice/blob/main/.github/workflows/scorecard-workflow.yaml) which calls [this Tekton Pipeline](https://github.com/bobcatfish/catservice/blob/main/tekton/scorecard-pipeline.yaml)._
+
 This is just a proof of concept and has (at least) the following limitations/room for improvement:
 * For projects with a lot of dependencies, GitHub will rate limit you and you'll need to fill the cache in several passes
   * Alternatively the script could be updated to use [scorecard's bigquery cache](https://github.com/ossf/scorecard#public-data)
